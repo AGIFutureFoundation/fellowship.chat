@@ -17,6 +17,50 @@ function coords(lat, lon) {
   return Number(lat).toFixed(4) + ', ' + Number(lon).toFixed(4);
 }
 
+/* ================= verified .geo.json set =================
+   GEO_LIVE_SLUGS: the 161 WorldForge slugs whose
+   site/earth/data/<slug>.geo.json file exists upstream, verified
+   2026-11-06 against the live GitHub API directory listing of
+   AGIFutureFoundation/WorldForge-Browser site/earth/data
+   (162 entries: 161 .geo.json files + 1 non-file entry "motion").
+   Cross-checked against HUB_LIVE_LINK_AUDIT_2026-11-06.md: the
+   remaining 383 hub slugs (382 city districts + spotlight
+   unspoken-smiles) are exactly that audit's 383-slug appendix —
+   no file exists upstream for them under this naming pattern.
+   The geo link is emitted ONLY for slugs in this set; all other
+   worlds show an honest "not yet published" label instead of a
+   link to a 404. Re-verify against the live listing before
+   regenerating this set — do not add a slug by hand. */
+var GEO_LIVE_SLUGS = new Set([
+  'agentic-payments', 'agents-deploy-infrastructure', 'atl-airport', 'atl-beltline', 'atl-buckhead', 'atl-cumberland',
+  'atl-downtown', 'atl-edgewood', 'atl-inman-park', 'atl-midtown', 'atl-old-fourth', 'atl-sweet-auburn',
+  'atl-virginia-highland', 'atl-west-end', 'autonomous-organizations', 'biota-blockchain', 'cancer-dao', 'chi-bridgeport',
+  'chi-chinatown', 'chi-hyde-park', 'chi-lincoln-park', 'chi-little-village', 'chi-loop', 'chi-ohare',
+  'chi-pilsen', 'chi-river-north', 'chi-south-loop', 'chi-west-loop', 'chi-wicker-park', 'climate-dao',
+  'dal-arts', 'dal-deep-ellum', 'dal-design', 'dal-downtown', 'dal-fort-worth', 'dal-irving',
+  'dal-lakewood', 'dal-oak-cliff', 'dal-plano', 'dal-richardson', 'dal-uptown', 'dal-victory',
+  'det-corktown', 'det-detroit-river', 'det-downtown', 'det-eastern', 'det-hamtramck', 'det-highland-park',
+  'det-lafayette', 'det-midtown', 'det-new-center', 'det-north-end', 'det-riverfront', 'det-west-side',
+  'diagnostic-x', 'ecology-dao', 'education-dao', 'empathic-x', 'hou-downtown', 'hou-east-end',
+  'hou-energy', 'hou-galleria', 'hou-heights', 'hou-med-center', 'hou-midtown', 'hou-montrose',
+  'hou-museum', 'hou-nasa', 'hou-ship-channel', 'hou-third-ward', 'la-beverly-hills', 'la-culver',
+  'la-downtown', 'la-hollywood', 'la-pasadena', 'la-santa-monica', 'la-silicon-beach', 'la-venice',
+  'locator-x', 'nola-bywater', 'nola-central-city', 'nola-french-quarter', 'nola-garden-district', 'nola-lower-ninth',
+  'nola-marigny', 'nola-mid-city', 'nola-treme', 'nola-uptown', 'nola-warehouse', 'pit-bloomfield',
+  'pit-downtown', 'pit-hazelwood', 'pit-lawrenceville', 'pit-oakland', 'pit-point', 'pit-shadyside',
+  'pit-south-side', 'pit-squirrel-hill', 'pit-strip', 'pit-tech-center', 'pit-university', 'public-health-dao',
+  'robotics-dao', 's04-curable-x', 's05-biopharma-go', 's06-blockchain', 's07-divine-dao', 's09-astrological-x',
+  's11-molecular', 's12-parking-smart-x', 's13-gonstead-x', 's14-askdoc-x', 's15-romanbridge-dao', 's16-echodawn-dao',
+  's17-curable-blockchain-dao', 's19-moscone-x', 's20-cmmc', 's21-incubator-dao', 's22-get-delivery-dao', 's23-avatar-chat',
+  's24-donatello-dao', 's25-mypet-ai', 's26-lyka-dao', 's27-genomic-dao', 's28-genomic-blockchain', 's29-metaverse-dao',
+  's31-aerospace-dao', 's32-solar-dao', 's33-infogurus', 's34-als-dao', 's35-parkinsons-dao', 'sf-bayview',
+  'sf-castro', 'sf-chinatown', 'sf-civic-center', 'sf-dogpatch', 'sf-embarcadero', 'sf-excelsior',
+  'sf-financial', 'sf-haight', 'sf-hayes-valley', 'sf-marina', 'sf-mission', 'sf-nob-hill',
+  'sf-nopa', 'sf-north-beach', 'sf-outer-sunset', 'sf-pacific-heights', 'sf-potrero', 'sf-presidio',
+  'sf-richmond', 'sf-rincon-hill', 'sf-russian-hill', 'sf-soma', 'sf-south-beach', 'sf-sunset',
+  'sf-telegraph-hill', 'sf-tenderloin', 'sf-visitacion', 'sf-western-addition', 'sf-yerba-buena',
+]);
+
 /* ================= stats ================= */
 function renderStats() {
   var c = W.counts || {};
@@ -93,11 +137,18 @@ function worldEntries() {
       series: series, status: 'worldforge', statusLabel: 'Earth viewer · not on RP1',
       group: w.group === 'curated' ? 'curated' : (w.group === 'spotlight' ? 'spotlight' : 'city'),
       facts: (w.place || '') + ' · ' + (coords(w.lat, w.lon) || '') + ' · ' + (w.biome || ''),
-      detail: 'WorldForge Earth world. All 544 worlds are rp1:null — none is live on RP1. View it in the Earth viewer; per-world data file linked as source.',
+      detail: GEO_LIVE_SLUGS.has(w.slug)
+        ? 'WorldForge Earth world. All 544 worlds are rp1:null — none is live on RP1. View it in the Earth viewer; per-world data file linked as source.'
+        : 'WorldForge Earth world. All 544 worlds are rp1:null — none is live on RP1. View it in the Earth viewer; no per-world data file is published yet.',
       enterUrl: 'https://' + w.subdomain + '/', enterNote: 'subdomain — planned, does not resolve yet',
       sourceUrl: 'https://agifuturefoundation.github.io/WorldForge-Browser/earth/',
       sourceLabel: 'Earth viewer (live)',
-      geoUrl: 'https://raw.githubusercontent.com/AGIFutureFoundation/WorldForge-Browser/main/site/earth/data/' + w.slug + '.geo.json'
+      /* Geo link gated on the verified live set (see GEO_LIVE_SLUGS):
+         only 161 of 544 slugs have a published .geo.json file. */
+      geoUrl: GEO_LIVE_SLUGS.has(w.slug)
+        ? 'https://raw.githubusercontent.com/AGIFutureFoundation/WorldForge-Browser/main/site/earth/data/' + w.slug + '.geo.json'
+        : null,
+      geoNote: GEO_LIVE_SLUGS.has(w.slug) ? null : 'world data (.geo.json) — not yet published'
     });
   });
   return out;
@@ -136,6 +187,7 @@ function renderWorldGrid() {
     var links = '<a href="' + esc(w.enterUrl) + '" target="_blank" rel="noopener">▶ Enter world</a>';
     if (w.sourceUrl) links += '<a href="' + esc(w.sourceUrl) + '" target="_blank" rel="noopener">Source ↗</a>';
     if (w.geoUrl) links += '<a href="' + esc(w.geoUrl) + '" target="_blank" rel="noopener">world data (.geo.json) ↗</a>';
+    else if (w.kind === 'worldforge' && w.geoNote) links += '<span style="font-size:12.5px;color:var(--ink3)">' + esc(w.geoNote) + '</span>';
     if (w.proofUrl) links += '<a href="' + esc(w.proofUrl) + '" target="_blank" rel="noopener">Render proof ↗</a>';
     return '<article class="card"><span class="badge ' + esc(w.status) + '">' + esc(w.statusLabel) + '</span>' +
       '<h3>' + esc(w.name) + '<span class="tag">' + esc(w.tag || '') + '</span></h3>' +
@@ -261,8 +313,8 @@ function initCommons() {
   // size canvas to its box
   function fit() {
     var r = canvas.getBoundingClientRect();
-    canvas.width = Math.max(320, Math.floor(r.width));
-    canvas.height = 420;
+    canvas.width = Math.floor(r.width);
+    canvas.height = Math.floor(r.height);
     draw();
   }
   window.addEventListener('resize', fit);

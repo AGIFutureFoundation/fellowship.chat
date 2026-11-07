@@ -22,11 +22,11 @@
 - [Governance](https://www.fellowship.chat/plans/governance.html): Steward Councils (3 humans, 2-of-3), human gate, board independence.
 - [The Numbers](https://www.fellowship.chat/plans/numbers.html): suggested valuations only, illustrative, never summed, not an offer — nothing issued.
 - [Roadmap](https://www.fellowship.chat/plans/roadmap.html): what exists today vs what is planned.
-- [Worlds showcase](https://www.fellowship.chat/showcase/index.html): the 35-series showcase copy.
+- [Worlds showcase](https://www.fellowship.chat/showcase/index.html): the showcase copy. Its index lists 35 entries — the 33 named W3 sub-series plus ALS DAO and Parkinsons DAO (not in the April 2026 W3 list); the page carries a count note saying so.
 
 ## Data
 
-- [worlds.json](https://www.fellowship.chat/worlds.json): 8 fabric files, 3 collections, 35-series index, full 544-world WorldForge list, subdomain mapping (batch 1 = 46, planned total = 549), AR/VR inventory, counts.
+- [worlds.json](https://www.fellowship.chat/worlds.json): 8 fabric files, 3 collections, 35-entry series index (33 named W3 sub-series + ALS DAO + Parkinsons DAO), full 544-world WorldForge list, subdomain mapping (batch 1 = 46, planned total = 549), AR/VR inventory, counts.
 - [agents.json](https://www.fellowship.chat/agents.json): Omega Hive registry (1/44 seated), SmartCiti slots (0/44), 5 Virtuals agents with all 29 jobs + 6 subscriptions, availability, x402 status.
 - [ideas.json](https://www.fellowship.chat/ideas.json): 16 seeded Idea Exchange prompts, each with its source.
 

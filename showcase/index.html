@@ -8,7 +8,7 @@
 /* A dark observatory: the family page is the control room, each world a window out. Single dark look by choice. */
 :root{--bg:#0b0f14;--panel:rgba(14,20,27,.88);--solid:#111821;--ink:#e8eef2;--ink2:#9aa9b4;--line:#243140;--gold:#e2b55c;--accent:#6fd3c1;
 --display:'Syne',system-ui,sans-serif;--body:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;color-scheme:dark}
-html,body{height:100%}body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);overflow:hidden}
+html,body{height:100%}body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);overflow:hidden}
 #stage{position:fixed;inset:0}#stage canvas{display:block;width:100%;height:100%;touch-action:none}
 #family{position:fixed;inset:0;overflow:auto;background:radial-gradient(1200px 600px at 70% -10%,#16303a 0,transparent 60%),var(--bg);z-index:5}
 .wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:32px 60px}
@@ -32,9 +32,9 @@ a.world .go{font:600 11px var(--body);letter-spacing:.1em;text-transform:upperca
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;backdrop-filter:blur(6px)}
 .card h2{font:700 20px/1.1 var(--display);margin:2px 0 4px}.card p{margin:4px 0;font-size:13px;color:var(--ink2)}
 .row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-button,.btn{font:500 12px var(--body);padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:#16202b;color:var(--ink);cursor:pointer;text-decoration:none}
+button,.btn{font:500 12px var(--body);padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:#16202b;color:var(--ink);cursor:pointer;text-decoration:none}
 button:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-#near h3{font:600 14px var(--body);margin:0 0 2px;color:var(--gold)}#near .agents{font:12px var(--mono);color:var(--accent)}#near form{display:flex;gap:6px;margin-top:8px}#near input{flex:1;min-width:0;background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font:13px var(--body)}#near button{background:var(--accent);color:#06221d;border:0;border-radius:8px;padding:6px 10px;font:600 12px var(--body);cursor:pointer}#near .reply{color:var(--ink);margin-top:6px}#near .never,#near .fine{font-size:11px;color:var(--ink2)}
+#near h3{font:600 14px var(--body);margin:0 0 2px;color:var(--gold)}#near .agents{font:12px var(--mono);color:var(--accent)}#near form{display:flex;gap:6px;margin-top:8px}#near input{flex:1;min-width:0;background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:13px var(--body)}#near button{background:var(--accent);color:#06221d;border:0;border-radius:8px;padding:10px 12px;font:600 12px var(--body);cursor:pointer}#near .reply{color:var(--ink);margin-top:6px}#near .never,#near .fine{font-size:11px;color:var(--ink2)}
 #map{position:fixed;right:12px;top:calc(12px + env(safe-area-inset-top,0px));z-index:3;width:168px;height:168px;border-radius:12px;border:1px solid var(--line);background:#000}
 #help{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:3;font:12px var(--mono);color:var(--ink2);background:var(--panel);padding:8px 10px;border-radius:10px;border:1px solid var(--line);max-width:calc(100vw - 24px)}
 #stick{position:fixed;left:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));width:110px;height:110px;border-radius:50%;border:1px solid var(--line);background:rgba(20,30,40,.45);z-index:3;display:none}
@@ -57,7 +57,7 @@ a.world .links{display:flex;gap:12px}.world-wrap{display:grid;gap:6px}
 #env{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:3;max-width:min(380px,calc(100vw - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12.5px;color:var(--ink2);backdrop-filter:blur(6px)}
 #env summary{cursor:pointer;font:600 12px var(--body);color:var(--ink)}#env summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .envrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:8px}
-#env select{background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 6px;font:12px var(--body)}
+#env select{background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:12px var(--body)}
 #env input[type=range]{flex:1;min-width:110px;accent-color:var(--accent)}#env output{font:12px var(--mono);color:var(--ink);min-width:3.2em}
 #cycle[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
 .xr[disabled]{opacity:.8;cursor:not-allowed;white-space:normal;text-align:left;max-width:100%}
@@ -69,12 +69,12 @@ a.world .links{display:flex;gap:12px}.world-wrap{display:grid;gap:6px}
 #near .cite{font:10px/1.5 var(--mono);background:var(--solid);border:1px solid var(--line);border-radius:6px;padding:0 5px;color:var(--accent);max-width:100%;overflow-wrap:anywhere}
 #near .turn{margin:6px 0 0}#near .turn b{color:var(--gold)}#near .turn.on{border-left:2px solid var(--gold);padding-left:6px}
 #near .persona{color:var(--ink);font-style:italic}#near .speak{background:var(--gold);color:#2a1d05}#near .row button{border:0}
-#near select{background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:3px 6px;font:12px var(--body);max-width:100%}
+#near select{background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:12px var(--body);max-width:100%}
 #near #botstop{background:#ff8a7a}#near .phys[disabled]{background:#2a3440;color:var(--ink2);cursor:not-allowed}
 @media (hover:none){#env{bottom:calc(150px + env(safe-area-inset-bottom,0px))}}
 @media (prefers-reduced-motion:reduce){a.tour,a.world{transition:none}}
 @media (max-width:560px){#map{width:120px;height:120px}#hud{max-width:calc(100vw - 150px)}}
-#ctl{position:fixed;right:12px;top:calc(192px + env(safe-area-inset-top,0px));z-index:5;display:flex;gap:6px}#ctl button,#ctl a,#wlist button{font:600 12.5px var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:6px 10px;cursor:pointer;text-decoration:none}
+#ctl{position:fixed;right:12px;top:calc(192px + env(safe-area-inset-top,0px));z-index:5;display:flex;gap:6px}#ctl button,#ctl a,#wlist button{font:600 12.5px var(--body);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:10px 12px;cursor:pointer;text-decoration:none}
 #ctl [aria-pressed=true]{border-color:var(--gold);color:var(--gold)}#ctl :focus-visible,#wlist :focus-visible{outline:2px solid var(--gold);outline-offset:2px}body.clean #ctl{top:calc(12px + env(safe-area-inset-top,0px))}
 #wlist{position:fixed;right:12px;top:calc(232px + env(safe-area-inset-top,0px));z-index:5;width:min(560px,calc(100vw - 32px));max-height:min(60vh,520px);overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px}
 body.clean #wlist{top:calc(52px + env(safe-area-inset-top,0px))}#wlist button{display:flex;gap:8px;align-items:center;text-align:left;padding:4px}#wlist canvas{width:72px;height:44px;border-radius:6px;flex:none}#wlist[hidden],#ctl[hidden]{display:none}
@@ -89,7 +89,8 @@ body.clean #hud,body.clean #map,body.clean #help,body.clean #caption,body.clean 
   <p class="mission" id="mission"></p>
   <p class="purpose" id="purpose"></p>
   <p class="cite" id="cite"></p>
-  <nav class="cta" aria-label="On this page"><a class="btn primary" href="#reel">Watch the tours</a><a class="btn" href="#paper">Read the whitepaper</a><a class="btn" href="#worlds">Walk the 35 worlds</a></nav>
+  <p class="note" style="border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--solid)"><b>Count note — read before quoting a number:</b> this showcase lists 35 entries: the 33 named W3 sub-series in the April 2026 internal list, plus ALS DAO and Parkinsons DAO, which are not in that list. Biota.blockchain has an anchored world but no series number. No series is formed, funded, or offered, and nothing on this page is an offer to sell or a solicitation to buy any security or membership interest.</p>
+  <nav class="cta" aria-label="On this page"><a class="btn primary" href="#reel">Watch the tours</a><a class="btn" href="#paper">Read the whitepaper</a><a class="btn" href="#worlds">Walk the worlds</a></nav>
   <div class="statrow" id="statrow"></div>
   <section id="reel" aria-labelledby="reel-h">
     <div class="eyebrow">Video</div>
@@ -104,11 +105,11 @@ body.clean #hud,body.clean #map,body.clean #help,body.clean #caption,body.clean 
     <h3 class="sec" id="paper-h">Agentic companies with a human backstop</h3>
     <div class="pcols">
     <article><h4>The problem</h4><p>Advanced AI can run more and more of a company's daily work. If the value it creates goes to whoever races fastest, safety is traded for speed and the benefits concentrate. The Foundation's answer is structural: put control of the companies where a mission cannot be bought out, and let agents do the operating work inside rules that people set and enforce.</p></article>
-    <article><h4>The structure</h4><p>At the top is the AGI Future Foundation, a California nonprofit public benefit corporation organized for charitable purposes. It holds the mission and, through agreements still to be written, control over the family. AGI Corp is the management company that runs the worlds day to day. W3 LLC is the series company whose 35 cells are the family's operating companies, alongside 6 focus-domain DAOs and 3 program tracks.</p></article>
+    <article><h4>The structure</h4><p>At the top is the AGI Future Foundation, a California nonprofit public benefit corporation organized for charitable purposes. It holds the mission and, through agreements still to be written, control over the family. AGI Corp is the management company that runs the worlds day to day. W3 LLC is the series company whose 33 named sub-series are the family's operating companies, alongside 6 focus-domain DAOs and 3 program tracks.</p></article>
     <article><h4>How a company runs</h4><p>Every cell has a management team: its own specialist agents seated in the eight roles the charter gives agents - research synthesis, task routing, proposal drafting, coordination, progress tracking, monitoring, collaborator scouting and grant drafting - with a coordinator holding any role no specialist fits. Agents draft and submit proposals. Only the cell's Steward Council, three human seats deciding two of three with signed votes, can enact, decline, amend the charter or move funds. An agent that tries is held on the record, not obeyed.</p></article>
     <article><h4>The Fiduciary Shield</h4><p>The shield is the set of protections that let the family put safety ahead of short-term profit: the nonprofit's dedicated purpose, a board that acts in good faith for that purpose, indemnification and insurance, a conflict-of-interest policy, clean separation of books between the nonprofit, the management company and each cell, and written agreements between them. Today 2 of those items are evidenced, 7 are open actions for the board and founder, and 4 are questions for counsel.</p></article>
     <article><h4>Shared benefit</h4><p>The Foundation describes two further programs: Open Global Investment, broad participation in the cells' economic upside kept separate from control, and a Windfall Clause, a pre-commitment by the cells to share profits above a set threshold. Neither has published terms yet; where the participation interests sit, and the threshold, share and recipient of the windfall, are decisions for the board and counsel.</p></article>
-    <article><h4>Where it stands</h4><p>Built and checked every five minutes: 35 series worlds and 44 management teams with 303 roles seated by the companies' own agents, 154 open proposals waiting on stewards, 600 furnished rooms with 2743 interactive hotspots, 4,300 scaffold spaces. Across the family's two GitHub owners, 55 of 345 repositories are the family's own work: 13 are linked to a company by name, 33 are candidates a steward confirms, and 145 forks are kept as studied references, never as the family's own. Not yet done: the founder-gated publication on RP1's Earth, the management company's and W3 LLC's filings, the stewards' real keys, and every price and payment account.</p></article>
+    <article><h4>Where it stands</h4><p>Built and checked every five minutes: 33 named series worlds (plus ALS DAO and Parkinsons DAO in this index) and 44 management teams with 303 roles seated by the companies' own agents, 154 open proposals waiting on stewards, 600 furnished rooms with 2743 interactive hotspots, 4,300 scaffold spaces. Across the family's two GitHub owners, 55 of 345 repositories are the family's own work: 13 are linked to a company by name, 33 are candidates a steward confirms, and 145 forks are kept as studied references, never as the family's own. Not yet done: the founder-gated publication on RP1's Earth, the management company's and W3 LLC's filings, the stewards' real keys, and every price and payment account.</p></article>
     </div>
     <p class="fine">This page describes an organization being built. Nothing on it is an offer to sell or a solicitation to buy any security or membership interest, and nothing on it is legal, tax or financial advice.</p>
   </section>
@@ -118,7 +119,7 @@ body.clean #hud,body.clean #map,body.clean #help,body.clean #caption,body.clean 
     <div class="box"><h2>People govern</h2><ul id="humans"></ul><p class="cite" style="margin-top:8px">Reserved for human stewards: <span id="reserved"></span></p></div>
     <div class="box"><h2>Programs</h2><ul id="programs"></ul></div>
   </div>
-  <h3 class="sec" id="worlds">The 35 series, each a walkable world</h3>
+  <h3 class="sec" id="worlds">The series, each a walkable world</h3>
   <p class="purpose">Pick a series to walk its world: 4 km by 4 km, generated from its own record. Its districts are its zones, the figures in them are its agents, and the Steward Council's three seats stand by the plaza.</p>
   <div class="grid" id="grid"></div>
   <p class="note" id="note"></p>
@@ -161,8 +162,8 @@ $('#cite').textContent = `${FAMILY.type}, California Secretary of State entity $
 $('#tiers').innerHTML = [
   ['apex', 'AGI Future Foundation - the nonprofit public benefit corporation that holds the mission and the control'],
   ['manager', 'AGI Corp - the management company that runs the worlds day to day (named on the filings; its own filing is to come)'],
-  ['parent', 'W3 LLC - the series company whose 35 cells are the family\'s companies (described by the Foundation; its filing is to come)'],
-  ['cells', '35 series, 6 focus-domain DAOs and 3 program tracks - each an agent management team under a human Steward Council'],
+  ['parent', 'W3 LLC - the series company whose 33 named sub-series are the family\'s companies (described by the Foundation; its filing is to come)'],
+  ['cells', '33 named series, 6 focus-domain DAOs and 3 program tracks - each an agent management team under a human Steward Council'],
 ].map(([k, v]) => `<span class="k">${k}</span><span>${esc(v)}</span>`).join('');
 $('#agentsdo').innerHTML = FAMILY.agents_handle.map((a) => `<li>${esc(a)}</li>`).join('');
 $('#humans').innerHTML = FAMILY.humans_hold.map((a) => `<li>${esc(a)}</li>`).join('');
@@ -1706,7 +1707,7 @@ function route() {
     <p>${S.team ? `Management team: ${S.team.seated} of ${S.team.roles} charter roles seated by its own agents · ${S.team.proposals} open proposals · readiness ${S.team.progress}` : ''}</p>
     <p>${S.rp1 ? `RP1 location given (${S.rp1.lat.toFixed(3)}, ${S.rp1.lon.toFixed(3)}); not yet published.` : 'No RP1 location given yet.'} Status: ${esc(S.status)}.</p>
     <p>Projects: ${S.projects.length ? `${S.projects.filter((p) => p.kind === 'linked').length} linked, ${S.projects.filter((p) => p.kind === 'candidate').length} candidate` : 'none linked yet'}${S.refs ? ` · ${S.refs} studied forks` : ''}.</p>
-    <div class="row"><a class="btn" href="#worlds">All 35 series</a><a class="btn" href="#${S.slug}">Walk</a><a class="btn" href="#tour.${S.slug}">Tour</a><button type="button" id="toPlaza">Plaza</button><button type="button" id="toProj">Projects</button>${world.zones.map((z, i) => `<button type="button" data-z="${i}">${esc(z.name)}</button>`).join('')}</div>`;
+    <div class="row"><a class="btn" href="#worlds">All series</a><a class="btn" href="#${S.slug}">Walk</a><a class="btn" href="#tour.${S.slug}">Tour</a><button type="button" id="toPlaza">Plaza</button><button type="button" id="toProj">Projects</button>${world.zones.map((z, i) => `<button type="button" data-z="${i}">${esc(z.name)}</button>`).join('')}</div>`;
   $('#toPlaza').onclick = () => { exitInterior(); if (mode === 'tour') { location.hash = S.slug; return; } px = 0; pz = 520; yaw = 0; };
   $('#toProj').onclick = () => { exitInterior(); if (mode === 'tour') { mode = 'walk'; $('#caption').hidden = true; $('#help').hidden = $('#env').hidden = false; } px = 250; pz = 125; yaw = 0; setNear(); };
   $('#title').querySelectorAll('[data-z]').forEach((b) => b.onclick = () => { exitInterior(); if (mode === 'tour') { mode = 'walk'; $('#caption').hidden = true; $('#help').hidden = $('#env').hidden = false; } const z = world.zones[+b.dataset.z]; const d = Math.hypot(z.x, z.z); px = z.x * (1 - 230 / d); pz = z.z * (1 - 230 / d); yaw = Math.atan2(-(z.x - px), -(z.z - pz)); });
