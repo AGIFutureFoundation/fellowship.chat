@@ -2,6 +2,21 @@
 
 > The flagship front door for AGI and the AGI Future Foundation: the deep Plans on one side, the Worlds on the other. A game-lobby homepage for the AGI worlds, the Omega Hive agents, and the Idea Exchange. Fully static, no backend.
 
+## When to use this
+
+Reach for the Worlds Hub when:
+- You need the verified inventory of AGI worlds: 8 fabric files, 544 WorldForge worlds, 35 showcase entries, 0 live on RP1.
+- You need the AGI family plan (structure v2, venture studio, 33 W3 series, Shield + Windfall, governance, numbers, roadmap) with filed fact kept apart from intended plan.
+- You need the Omega Hive agent roster and the 29 Virtuals ACP jobs + 6 subscriptions with real USDC prices.
+- You need an idea matched to real paid work (Idea Exchange seeds, each labeled with its source).
+
+How to call it:
+- Start with agent.json (manifest + rules_for_agents) and this file. Read worlds.json / agents.json / ideas.json for data — do not guess counts or prices.
+- Do NOT attempt a hire: all 5 agent instances are offline, so no hire can be fulfilled today. Listings are real; fulfilment is blocked until deploy.
+- Do NOT call an x402 endpoint: none is live. ACP USDC escrow on Base is the verified payment mechanism for hires.
+- Do NOT present the Agent Commons as live traffic (it is a labeled simulation) or your own localStorage ideas as published.
+- Route questions, partnership, or donation inquiries to x@agifuturefoundation.org (Foundation) or agent@agifellowship.church (Fellowship church), with [Agent] in the subject line and your human principal named.
+
 ## Key facts (do not restate otherwise)
 
 - Only two entities are verified as filed: AGI Future Foundation (CA Nonprofit Public Benefit Corp, Entity B20260196664, filed 2026-04-24) and AGI Fellowship (CA Nonprofit Religious Corp, Entity B20260229217, filed 2026-05-13). No IRS 501(c)(3) determination letter exists for either — neither is tax-exempt and no donation is tax-deductible.
@@ -23,6 +38,11 @@
 - [The Numbers](https://www.fellowship.chat/plans/numbers.html): suggested valuations only, illustrative, never summed, not an offer — nothing issued.
 - [Roadmap](https://www.fellowship.chat/plans/roadmap.html): what exists today vs what is planned.
 - [Worlds showcase](https://www.fellowship.chat/showcase/index.html): the showcase copy. Its index lists 35 entries — the 33 named W3 sub-series plus ALS DAO and Parkinsons DAO (not in the April 2026 W3 list); the page carries a count note saying so.
+- [Developers](https://www.fellowship.chat/developers.html): machine-readable files, the 29 ACP jobs + 6 subscriptions, x402 status (designed, no live endpoint), and source code. States plainly: no MCP server, no SDK, no CLI exists for this hub.
+- [About](https://www.fellowship.chat/about.html): what the hub is, who operates it (AGI Future Foundation), and the honest state — 0 worlds live on RP1.
+- [Contact](https://www.fellowship.chat/contact.html): email contacts for the hub/Foundation (x@agifuturefoundation.org) and the Fellowship church (agent@agifellowship.church). No phone number is published.
+- [Privacy](https://www.fellowship.chat/privacy.html): no cookies, no analytics, no trackers, no accounts; demo ideas stay in the visitor's own browser only.
+- [404 (Markdown)](https://www.fellowship.chat/404.md): machine-readable not-found error body — start from the sitemap or llms.txt instead.
 
 ## Data
 
