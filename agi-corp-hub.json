@@ -1,0 +1,206 @@
+{
+   "Container": "agi-corp-hub",
+   "Status": {
+      "state": "demo scene \u2014 NOT live on RP1",
+      "anchored": false,
+      "coordinates": null,
+      "location": null,
+      "live_on_rp1": false,
+      "portal_attached": false,
+      "note": "Built 2026-11-06 as a local demo from verified-local sample assets only. No coordinates, lat/lon, or real-world location are claimed for the Hub \u2014 none exist on record. To go live it still needs: hosting of this file plus its referenced assets at stable public URLs, and an RP1 portal attach (company 130) once the portal renders an attach form."
+   },
+   "Services": [],
+   "Modules": [
+      {
+         "sUrl": "../poc-world/stool-src/wasm/map.wasm"
+      }
+   ],
+   "Primary": {
+      "Ambient": {
+         "fBrightness": 0.05,
+         "fColor": "0xFFFFFF"
+      },
+      "Directional": {
+         "fBrightness": 0.5,
+         "fColor": "0xFFFFFF",
+         "Rotation": [
+            0.0,
+            0.5808,
+            0.6663,
+            0.468
+         ]
+      }
+   },
+   "Data": {
+      "Scene": {
+         "Head": {
+            "Self": "P-?"
+         },
+         "Name": "AGI Corp Hub",
+         "Resource": {
+            "sReference": "../poc-world/stool-src/assets/Stool.glb"
+         },
+         "Transform": {
+            "Position": [
+               0.0,
+               0.0,
+               0.0
+            ]
+         },
+         "aChildren": [
+            {
+               "Head": {
+                  "Self": "P-?"
+               },
+               "Name": "Bucket",
+               "Resource": {
+                  "sReference": "../poc-world/stool-src/assets/Bucket.glb"
+               },
+               "Transform": {
+                  "Position": [
+                     0.0,
+                     0.0,
+                     0.428
+                  ]
+               }
+            },
+            {
+               "Head": {
+                  "Self": "L-?"
+               },
+               "Name": "Fill Light",
+               "Type": {
+                  "bType": 2
+               },
+               "Transform": {
+                  "Position": [
+                     -0.5,
+                     -0.45,
+                     0.514
+                  ],
+                  "Rotation": [
+                     0.0,
+                     -0.0119,
+                     0.3582,
+                     0.9336
+                  ]
+               },
+               "Properties": {
+                  "fBrightness": 0.4,
+                  "fColor": "0xB8CCFF",
+                  "fAngleOpening": 40.0,
+                  "fAngleFalloff": 12.0
+               }
+            },
+            {
+               "Head": {
+                  "Self": "L-?"
+               },
+               "Name": "Rim Light",
+               "Type": {
+                  "bType": 2
+               },
+               "Transform": {
+                  "Position": [
+                     -0.15,
+                     0.55,
+                     0.814
+                  ],
+                  "Rotation": [
+                     0.0,
+                     0.2846,
+                     -0.5489,
+                     0.786
+                  ]
+               },
+               "Properties": {
+                  "fBrightness": 0.4,
+                  "fColor": "0xFFE0B0",
+                  "fAngleOpening": 35.0,
+                  "fAngleFalloff": 10.0
+               }
+            },
+            {
+               "Head": {
+                  "Self": "P-?"
+               },
+               "Name": "Welcome Desk",
+               "Resource": {
+                  "sReference": "../poc-world/stool-src/assets/Crate.glb"
+               },
+               "Transform": {
+                  "Position": [
+                     1.4,
+                     0.0,
+                     0.0
+                  ]
+               }
+            },
+            {
+               "Head": {
+                  "Self": "P-?"
+               },
+               "Name": "Desk Tin",
+               "Resource": {
+                  "sReference": "../poc-world/stool-src/assets/Tin.glb"
+               },
+               "Transform": {
+                  "Position": [
+                     1.4,
+                     0.45,
+                     0.0
+                  ]
+               }
+            },
+            {
+               "Head": {
+                  "Self": "P-?"
+               },
+               "Name": "Lobby Feature",
+               "Resource": {
+                  "sReference": "../poc-world/stool-src/assets/Container.glb"
+               },
+               "Transform": {
+                  "Position": [
+                     -1.6,
+                     1.2,
+                     0.0
+                  ]
+               }
+            },
+            {
+               "Head": {
+                  "Self": "P-?"
+               },
+               "Name": "Hub Duck",
+               "Resource": {
+                  "sReference": "../msf-map-svc/sample/objects/duck.glb"
+               },
+               "Transform": {
+                  "Position": [
+                     0.7,
+                     0.9,
+                     0.0
+                  ]
+               }
+            },
+            {
+               "Head": {
+                  "Self": "P-?"
+               },
+               "Name": "Capsule Feature",
+               "Resource": {
+                  "sReference": "../msf-map-svc/sample/objects/capsule.glb"
+               },
+               "Transform": {
+                  "Position": [
+                     -0.9,
+                     -1.2,
+                     0.0
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}

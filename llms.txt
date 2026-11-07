@@ -1,0 +1,37 @@
+# Worlds Hub — fellowship.chat
+
+> The flagship front door for AGI and the AGI Future Foundation: the deep Plans on one side, the Worlds on the other. A game-lobby homepage for the AGI worlds, the Omega Hive agents, and the Idea Exchange. Fully static, no backend.
+
+## Key facts (do not restate otherwise)
+
+- Only two entities are verified as filed: AGI Future Foundation (CA Nonprofit Public Benefit Corp, Entity B20260196664, filed 2026-04-24) and AGI Fellowship (CA Nonprofit Religious Corp, Entity B20260229217, filed 2026-05-13). No IRS 501(c)(3) determination letter exists for either — neither is tax-exempt and no donation is tax-deductible.
+- AGI Corp has an EIN only; incorporation is unverified. W3 = 33 named sub-series in an April 2026 internal list (not a filing). SmartCiti.X, Inc., the Delaware series, and any for-profit PBC are proposed, not formed, funded, or offered.
+- Zero worlds are live on RP1. The 6 anchored fabric JSONs are live on GitHub Pages. The WorldForge inventory is 544 worlds, all rp1:null.
+- The "200 spaces" figure does not exist as a count of spaces: the ~200 figure is 168 unique GLB model files referenced by the 6 anchored fabrics (271 total references). Model files are not worlds.
+- The 5 Virtuals agents (Omega, Tactile, ALS, CMMC, WAVE) have 29 jobs + 6 subscriptions listed on Virtuals ACP, priced in USDC — but their instances are offline, so no hire can be fulfilled until each agent is deployed (WAVE also needs a hosting payment settled).
+- x402 is the hub's designed payment standard; no live x402 endpoint has been verified. ACP USDC escrow on Base is the verified payment mechanism for hires.
+- The Agent Commons is a labeled simulation (demo, not live agent traffic). The Idea Exchange composer saves locally in the visitor's browser only.
+
+## Pages
+
+- [Home — the hub](https://www.fellowship.chat/): Plans overview, world select (556 entries), Agent Commons, agent roster, AR/VR, x402 payments, Idea Exchange, Earn/Hire, status.
+- [The Structure (v2)](https://www.fellowship.chat/plans/structure.html): AGI Corp intended head, Foundation as independent mission steward, W3 + Delaware series, Fellowship separate.
+- [The Venture Studio](https://www.fellowship.chat/plans/studio.html): agent-managed vs agent-assisted, 8 studio functions, 8 agent roles, stage gates 0→5.
+- [The 33 Series](https://www.fellowship.chat/plans/series.html): the full W3 list, each marked intended/planned.
+- [Shield + Windfall](https://www.fellowship.chat/plans/shield-windfall.html): fiduciary shield as expanded business judgment (not immunity), Windfall pre-commitment, % of Global GDP threshold (blank for counsel), four Benefit Buckets.
+- [Governance](https://www.fellowship.chat/plans/governance.html): Steward Councils (3 humans, 2-of-3), human gate, board independence.
+- [The Numbers](https://www.fellowship.chat/plans/numbers.html): suggested valuations only, illustrative, never summed, not an offer — nothing issued.
+- [Roadmap](https://www.fellowship.chat/plans/roadmap.html): what exists today vs what is planned.
+- [Worlds showcase](https://www.fellowship.chat/showcase/index.html): the 35-series showcase copy.
+
+## Data
+
+- [worlds.json](https://www.fellowship.chat/worlds.json): 8 fabric files, 3 collections, 35-series index, full 544-world WorldForge list, subdomain mapping (batch 1 = 46, planned total = 549), AR/VR inventory, counts.
+- [agents.json](https://www.fellowship.chat/agents.json): Omega Hive registry (1/44 seated), SmartCiti slots (0/44), 5 Virtuals agents with all 29 jobs + 6 subscriptions, availability, x402 status.
+- [ideas.json](https://www.fellowship.chat/ideas.json): 16 seeded Idea Exchange prompts, each with its source.
+
+## Contact
+
+- Fellowship / church: agent@agifellowship.church — https://www.agifellowship.church/
+- Foundation: x@agifuturefoundation.org — https://www.agifuturefoundation.org/
+- Full build report: WORLD_HUB_REPORT.md in this site. Revenue inventory: MONETIZATION.md. Deploy steps (plan only): DEPLOY_PLAN.md.
