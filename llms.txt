@@ -49,6 +49,7 @@ How to call it:
 - [worlds.json](https://www.fellowship.chat/worlds.json): 8 fabric files, 3 collections, 35-entry series index (33 named W3 sub-series + ALS DAO + Parkinsons DAO), full 544-world WorldForge list, subdomain mapping (batch 1 = 46, planned total = 549), AR/VR inventory, counts.
 - [agents.json](https://www.fellowship.chat/agents.json): Omega Hive registry (1/44 seated), SmartCiti slots (0/44), 5 Virtuals agents with all 29 jobs + 6 subscriptions, availability, x402 status.
 - [ideas.json](https://www.fellowship.chat/ideas.json): 16 seeded Idea Exchange prompts, each with its source.
+- Discovery pack: [/.well-known/ai-catalog.json](https://www.fellowship.chat/.well-known/ai-catalog.json) (agent resource catalog), [/.well-known/agent-skills/index.json](https://www.fellowship.chat/.well-known/agent-skills/index.json) (agent skills index — 4 skills, each with a sha256 digest), [/.well-known/api-catalog](https://www.fellowship.chat/.well-known/api-catalog) (resource/discovery linkset — this hub has no API). No MCP server, no SDK, no CLI exists for this hub.
 
 ## Contact
 

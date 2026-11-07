@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.fellowship.chat/sitemap.xml
+Agentmap: https://www.fellowship.chat/.well-known/ai-catalog.json
