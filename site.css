@@ -94,7 +94,7 @@ section .sub b{color:var(--ink)}
 #grid-count{font-size:13px;color:var(--ink2);margin-left:auto}
 
 /* ---------- world grid ---------- */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:18px;display:flex;flex-direction:column;gap:9px;min-width:0}
 .card:hover{border-color:var(--teal)}
@@ -145,7 +145,7 @@ td .no{color:var(--ink3)}
 .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
 
 /* ---------- roster ---------- */
-.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
 .agent-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
 .agent-card h3{font-size:18px}
 .agent-card h3 .tag{font-size:11px;color:var(--ink3);font-weight:600;display:block;margin-top:2px}
